@@ -1,6 +1,15 @@
+ body{background: url("https://www.crc.id.au/wp-content/uploads/2011/01/Wargames-Desktop-2.jpg") no-repeat;
+      background-size: 100%;
+     /* background-position: top; */
+      }
+
+
  #board{
             width:920px;
-            height:920px;
+            /*height:920px;*/
+            position:fixed;
+            top: 25%;
+            left: 25%;
           }
           #board div{
             width:300px;
