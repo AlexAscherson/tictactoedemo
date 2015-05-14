@@ -1,3 +1,9 @@
+http://jsbin.com/metaze/1/edit?html,js,console,output
+
+
+
+
+
 var activeplayer = "x";
 var xmoves = [];
 var ymoves = [];

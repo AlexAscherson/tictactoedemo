@@ -1,3 +1,55 @@
+var gamehtml = '';
+
+$( document ).ready(function() {
+
+$( "#button1" ).click(function() {
+  
+  gamehtml = $('#gamewrap').html;
+  console.log( "Handler for .click() called.");
+  appendtohidden();
+  hidegame();         
+    
+});
+              
+$( "#button1" ).dblclick(function() {
+  console.log( "Handler for dbl.click() called.");
+  showgame();         
+    
+});
+//console.log(gamehtml);  
+
+function appendtohidden(){
+  gamehtml = $('#gamewrap').html; 
+  $("#gamewrap")
+    .appendTo("#hiddendiv");
+//   console.log(this);
+  //$('#gamewrap').html('');
+ // $('#gamewrap').html(this.value);
+  console.log("its gone");
+ // console.log(gamehtml);
+} 
+
+function hidegame(){
+  $('#gamewrap').html('');
+ // $('#gamewrap').html(this.value);
+  console.log("its gone");
+ // console.log(gamehtml);
+} 
+
+
+function showgame(){
+
+  $("#hiddendiv")
+    .appendTo("#gamewrapparent");
+
+}
+
+
+
+
+
+
+
 var activeplayer = "x";
 var xmoves = [];
 var ymoves = [];
@@ -11,20 +63,19 @@ var clicked_id = "";
 var arraytoCheck = [];
 var winningCombo = [[0, 3, 6],[2, 5, 8],[1, 4, 7],[2, 4, 6],[2, 5, 8],[0, 1, 2],[3, 4, 5],[6, 7, 8],[0, 4, 8]]; 
 
-$( document ).ready(function() {
 
-function playSound(filename) {
-    var sound = soundManager.createSound({
-      url: 'sounds/' + filename
-    });
-    sound.play();
-  }
+
+
+
 
   function checkforwinner(){
-    //console.log("checkingforwinner");
+
+
+    console.log("checkingforwinner");
     //set array to check
     if (activeplayer === 'x'){
       winningArray = xmoves;
+
       var orderedarray = winningArray.sort();
       console.log(orderedarray)
 
@@ -32,71 +83,95 @@ function playSound(filename) {
       winningArray = ymoves;
       var orderedarray = winningArray.sort();
       console.log(orderedarray)
+
     }
+    // console.log(arraytoCheck);
+     //debugger;
 
     //begin win checker
+    
     winningCombo.forEach(function(array, index){
       var count = 0
-      //console.log(array,index)
+      console.log(array,index)
       winningArray.forEach(function(element, index2){
         if (element === array[0] || element === array[1] || element === array[2]){
           count++;
-        //console.log("element and index2" +element,index2);
+
+
+        console.log("element and index2" +element,index2);
         }
-        //console.log("its the count " +count);
+        console.log("its the count " +count);
         if (count ===3) {
           alert("we have a winner" + activeplayer);
           playerwin = activeplayer;
         }
       })
-    })   
-  }
+    })
+
+
+
+
+    
+}
     //end winchecker function
 
-  
  $( ".gamesquare" ).click(function() {
-      //clicking on a square function
+      //get id of clicked element
+
     clicked_id = $(this).attr('id');
-   // //get id of clicked element console.log(clicked_id);
+    console.log(clicked_id);
     turn = turn +1;
-        // check box is empty and game is ongoing before write
+
+        // check box is empty
     if ($(this).text() === "") 
     {
         if (playerwin === "none yet") 
       {
+
           //check what player it is
+
         if (activeplayer === "x") 
         {
-            
+            //write x into box
           $(this).text("x");
-          //write x into box+ add played moves to moves array
+          
+          //add played move to moves array
             xmoves.push(Number(this.id));
-            checkforwinner();
             //run check for winner function
-            activeplayer = "y";
+            checkforwinner();
             //change active player
+            activeplayer = "y";
+
+          //end player1 code
+
         } else 
           {
+          
             $(this).text("y");
             ymoves.push(Number(this.id));
             checkforwinner();
             activeplayer = "x";
           } 
-                //endplayer2code /else          
-      }else {alert("The Game is over. Double click a square to restart");}
+                //endplayer2code /else
+              
+      }else {alert("game is over");}
 
             //end emptycheck 
-    } else {console.log("Illegal move, box is full");}
+    } else {console.log("thing is full");}
           //endelse 
+
     if (turn >= 9 && playerwin ==="none yet"){
-      alert("Its a draw, You hear the computer data tapes spinning into overdrive..");
+      alert("its a draw");
       // console.log("checking for draw");
     };
   }
       //endclickfunction
 
+
         ); 
 //what is this one doing?
+
+    
 
     //end docuready
 });

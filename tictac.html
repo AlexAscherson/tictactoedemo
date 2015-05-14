@@ -6,6 +6,8 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <script type="text/javascript" src="js/ticv2.js"></script>
+<script type="text/javascript" src="js/animations.js"></script>
+
   <script src="js/soundmanager2.js"></script>
 <link rel="stylesheet" href="css/animations.css">
 
@@ -16,10 +18,14 @@
 
 Above Body - Tic Tac toe
 <body>
-<div id="loadingbox" class ="pullDown"></div>
+<div id="loadingbox" class =""></div>
 
-<div id="board" class ="pullDown">
-            <div>
+<div id="board" class ="">
+            <div id ="dial" class ="">dialing up now
+            </div>
+
+
+            <div id ="game" class ="hidden">
             <span class ="gamesquare" id="0" ></span>
             <span class ="gamesquare" id="1" ></span>
             <span class ="gamesquare" id="2" ></span>
@@ -30,9 +36,22 @@ Above Body - Tic Tac toe
             <span class ="gamesquare" id="7" ></span>
             <span class ="gamesquare" id="8" ></span>
             </div>
-            <div>
-              <span>...</span>
+
+            <div id="uiblock">
+              <span class = "uiblock" id="ui1">...</span>
+              <span class = "uiblock" id="ui2">...
+
+              
+              <button type="button" id="button1">play game</button>
+              <button type="button" id="button2">toggle dial</button>
+              <button type="button" id="button3">toggle dial</button>
+  
+              
+  
+
+              </span>
             </div>
+
           </div>
 
 
