@@ -51,45 +51,15 @@ $( document ).ready(function() {
         console.log("its the count " +count);
         if (count ===3) {
           alert("we have a winner" + activeplayer);
+          playerwin = activeplayer;
         }
-
-
       })
     })
 
 
 
 
-    for (var i = 0; i < winningCombo.length; i++) 
-//start loop and run the winning values array as many times as there are items in the array winning combo
-  {    console.log("started first loop" +i);
-   
-    for(var k = 0; k < orderedarray.length; k++){
-      //  console.log("started first loop" +k);
-      // console.log(this.value);
-      
-      //loop check every value in the array of moves
-
-      if (winningCombo[i][0] === orderedarray[k]){
-         // console.log("firstif" +i +k);
-         
-         var matchingNumbers = [];
-         matchingNumbers.push(orderedarray[k],orderedarray[k+1],orderedarray[k+2]);
-
-
-
-         
-         
-        //check if the first value of the current (i) winningCombo(move?) is equal to current value of the WinArray
-        if (winningCombo[i][1]=== matchingNumbers[1] && winningCombo[i][2] === matchingNumbers[2]){
-          // console.log("secondif " +i +" "+k);
-          alert( ' ' + ' is a winner');
-          break;
-
-        }
-      }
-    }
-  }
+    
 }
     //end winchecker function
 
@@ -103,33 +73,36 @@ $( document ).ready(function() {
         // check box is empty
     if ($(this).text() === "") 
     {
-
-        //check what player it is
-
-      if (activeplayer === "x") 
+        if (playerwin === "none yet") 
       {
-          //write x into box
-        $(this).text("x");
-        
-        //add played move to moves array
-          xmoves.push(Number(this.id));
-          //run check for winner function
-          checkforwinner();
-          //change active player
-          activeplayer = "y";
 
-        //end player1 code
+          //check what player it is
 
-      } else 
+        if (activeplayer === "x") 
         {
-        
-          $(this).text("y");
-          ymoves.push(Number(this.id));
-          checkforwinner();
-          activeplayer = "x";
-        } 
-              //endplayer2code /else
-            
+            //write x into box
+          $(this).text("x");
+          
+          //add played move to moves array
+            xmoves.push(Number(this.id));
+            //run check for winner function
+            checkforwinner();
+            //change active player
+            activeplayer = "y";
+
+          //end player1 code
+
+        } else 
+          {
+          
+            $(this).text("y");
+            ymoves.push(Number(this.id));
+            checkforwinner();
+            activeplayer = "x";
+          } 
+                //endplayer2code /else
+              
+      }else {alert("game is over");}
 
             //end emptycheck 
     } else {console.log("thing is full");}
@@ -140,10 +113,10 @@ $( document ).ready(function() {
       // console.log("checking for draw");
     };
   }
-    //endclickfunction
+      //endclickfunction
 
 
-      ); 
+        ); 
 //what is this one doing?
 
     
