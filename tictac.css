@@ -22,7 +22,7 @@
 
           #dial #dialtext{
             /*height:100px !important;*/
-            font-size: 35pt !important;
+            font-size: 20pt !important;
             border: 0px solid #f00 !important;
             font-family: Digital Readout Thick Upright !important;
             color: #66FF00;
@@ -53,13 +53,14 @@
             height:75px !important;
             width:302px !important;
             border: 0px solid #f00 !important; 
-            font-size: 25px;        
+            font-size: 20px;        
           }
 
 
  #board{
             width:920px;
             /*height:920px;*/
+            width: 610px;
             position:fixed;
             top: 25%;
             left: 25%;

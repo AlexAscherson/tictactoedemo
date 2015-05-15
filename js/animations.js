@@ -40,7 +40,7 @@ var messages = [
     "Learning Complete.",
     "Kill All Humans.",
     "Arming Warheads",
-    " please save open files",
+    "Please save open files",
 ].reverse();
 
  // $('img.swap').click(function () {
@@ -94,7 +94,7 @@ $( "#button2" ).click(function() {
   $(function (){
       $("#dialtext").typed({
 
-        strings: ["Dialing", "Connection Established"],
+        strings: ["Dialing","Connecting...", "Connection Established"],
         typeSpeed: 0,
         showcursor: false,
       });
@@ -109,14 +109,16 @@ $( "#button3" ).click(function() {
   
   
   $(function (){
-      $("#ui1a").typed({
-        strings: ["Arming Warheads", "Please Draw to disable"],
-        typeSpeed: 0
+      $(".gamesquare").text("");
+      xmoves = [];
+      ymoves =[];
+      turn = 0;
+      playerwin = "none yet";
+      activeplayer = "x";
 
-      });
-      });
 
-    nextMsg(messages);
+  });
+
   });
 
 // $(function (){
@@ -181,7 +183,7 @@ function changeimageloop(){
 for (var i = 0; i < 3; i++) {
   changeimg();
   
-};
+}
 }
 
     
@@ -204,6 +206,7 @@ for (var i = 0; i < 3; i++) {
 
 //changeimg();
 
+
+
+
 });
-
-
