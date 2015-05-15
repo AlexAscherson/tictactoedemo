@@ -22,18 +22,17 @@ function playSound(filename) {
 
   function checkforwinner(){
     //console.log("checkingforwinner");
-    //set array to check
+
+    //set which players moves to check
     if (activeplayer === 'x'){
       winningArray = xmoves;
       var orderedarray = winningArray.sort();
-      console.log(orderedarray)
-
+      //console.log(orderedarray)
     } else{
       winningArray = ymoves;
       var orderedarray = winningArray.sort();
-      console.log(orderedarray)
+      //console.log(orderedarray)
     }
-
     //begin win checker
     winningCombo.forEach(function(array, index){
       var count = 0
@@ -47,6 +46,7 @@ function playSound(filename) {
         if (count ===3) {
           alert("we have a winner" + activeplayer);
           playerwin = activeplayer;
+           $('#ui1a').text(activeplayer);
         }
       })
     })   
@@ -67,7 +67,7 @@ function playSound(filename) {
           //check what player it is
         if (activeplayer === "x") 
         {
-            
+          playSound('gasp_x.wav');
           $(this).text("x");
           //write x into box+ add played moves to moves array
             xmoves.push(Number(this.id));
@@ -76,7 +76,7 @@ function playSound(filename) {
             activeplayer = "y";
             //change active player
         } else 
-          {
+          { playSound('gasp_ohhh.wav');
             $(this).text("y");
             ymoves.push(Number(this.id));
             checkforwinner();
@@ -90,6 +90,7 @@ function playSound(filename) {
           //endelse 
     if (turn >= 9 && playerwin ==="none yet"){
       alert("Its a draw, You hear the computer data tapes spinning into overdrive..");
+      $('#ui1a').text('Draw.  The World is saved.');
       // console.log("checking for draw");
     };
   }

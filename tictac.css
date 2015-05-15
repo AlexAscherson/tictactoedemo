@@ -10,7 +10,9 @@
             position:fixed;
             top: 25%;
             left: 25%;
-            background: white;
+            background-color: #000000;
+            opacity: 0.6;
+            color: white;
           }
 
  #board{
@@ -25,6 +27,9 @@
             height:300px;
             float:left;
             border:1px solid #ff8a00;
+            background-color: #000000;
+            opacity: 0.6;
+            color: white;
           }
           #board span{
             font-size:300%;
@@ -35,7 +40,7 @@
             border:1px solid white;
             text-align:center;  
             line-height:99px;
-            background-color:#f2f2f2;
+            background-color:#000000;
           }
           
 
@@ -46,19 +51,52 @@
             color:white; 
           }
 
-
-
-
-          #ui1{
+#uiblock div{
+            width:300px;
+            height:300px;
+            float:left;
+            border:1px solid #ff8a00;
+            background-color: #000000;
+            opacity: 0.6;
+            color: white;
+          }
+          /*#uiblock span{
             font-size:300%;
-            width:292px !important;
-            height:194px !important;
+            width:98px;
+            height:98px;
             float:left; 
             display:block;
             border:1px solid white;
             text-align:center;  
             line-height:99px;
-            background-color:#f2f2f2;     
+            background-color:#000000;
+          }*/
+
+
+          #ui1{
+            font-size:300%;
+            width:292px !important;
+            height:200px !important;
+            float:left; 
+            display:block;
+            border:1px solid green !important;
+            text-align:center;  
+            line-height:99px;
+            background-color:#000000;  
+            margin-left: 3px;   
+          }
+
+          #ui1a{
+            font-size:100% !important;
+            width:292px !important;
+            height:192px !important;
+            float:left; 
+            display:block;
+            border:1px solid green;
+            text-align:center;  
+            line-height:99px;
+            background-color:#000000;     
+            /*margin-left: 3px; */
           }
           
           #ui2{
@@ -70,7 +108,8 @@
             border:1px solid white;
             text-align:center;  
             line-height:99px;
-            background-color:#f2f2f2;     
+            background-color:#000000;
+            /*margin-left: 6px;      */
           }
 
 

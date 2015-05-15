@@ -7,7 +7,7 @@
 
 <script type="text/javascript" src="js/ticv2.js"></script>
 <script type="text/javascript" src="js/animations.js"></script>
-
+<script type="text/javascript" src="js/typed.js"></script>
   <script src="js/soundmanager2.js"></script>
 <link rel="stylesheet" href="css/animations.css">
 
@@ -21,7 +21,13 @@ Above Body - Tic Tac toe
 <div id="loadingbox" class =""></div>
 
 <div id="board" class ="">
-            <div id ="dial" class ="">dialing up now
+            <div id ="dial" >
+
+            <img src="imgs/connecting.png" id="connecting">
+
+
+            dialing up now
+            
             </div>
 
 
@@ -38,13 +44,15 @@ Above Body - Tic Tac toe
             </div>
 
             <div id="uiblock">
-              <span class = "uiblock" id="ui1">...</span>
+              
+              <span class = "uiblock" id="ui1"><span id="ui1a">Waiting for Input</span></span>
+                
               <span class = "uiblock" id="ui2">...
 
               
               <button type="button" id="button1">play game</button>
               <button type="button" id="button2">toggle dial</button>
-              <button type="button" id="button3">toggle dial</button>
+              <button type="button" id="button3">Nope</button>
   
               
   
