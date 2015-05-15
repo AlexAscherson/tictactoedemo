@@ -21,7 +21,8 @@
           }
 
           #dial #dialtext{
-            /*height:100px !important;*/
+            height:35px !important;
+            width: 285px;
             font-size: 20pt !important;
             border: 0px solid #f00 !important;
             font-family: Digital Readout Thick Upright !important;
@@ -33,7 +34,9 @@
 
 
   
-          #game {width: 305px !important;}
+          #game {width: 305px !important;
+          font-family: Digital Readout Thick Upright !important;
+            color: #66FF00;}
 
           #dial span{
             height:75px !important;
@@ -73,7 +76,7 @@
             float:left;
             border:2px solid green !important;
             background-color: #000000;
-            opacity: 0.6;
+            /*opacity: 0.6;*/
             color: white;
           }
           #board span{
@@ -164,19 +167,22 @@
      -webkit-animation: blink 0.7s infinite;
      -moz-animation: blink 0.7s infinite;
      animation: blink 0.7s infinite;
-     display: none;
+     display: none !important;
  }
 
-/*
+ #typed-cursor{
+     opacity: 1;
+     -webkit-animation: blink 0.7s infinite;
+     -moz-animation: blink 0.7s infinite;
+     animation: blink 0.7s infinite;
+     display: none !important;
+ }
+
+
 
           #uiblock {
-            font-size:300%;
-            width:292px !important;
-            height:98px;
-            float:left; 
-            display:block;
-            border:1px solid white;
-            text-align:center;  
-            line-height:99px;
-            background-color:#f2f2f2;     
-          }*/
+            
+            width:297px !important;
+            
+              
+          }

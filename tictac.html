@@ -1,74 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Tic Tac Toe Game</title>
+  <head>
+    <title>Tic Tac Toe Game</title>
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/ticv2.js"></script>
+    <script type="text/javascript" src="js/animations.js"></script>
+    <script type="text/javascript" src="js/typed.js"></script>
+    <script src="js/soundmanager2.js"></script>
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" type="text/css" href="tictac.css">
+  </head>
 
-<script type="text/javascript" src="js/ticv2.js"></script>
-<script type="text/javascript" src="js/animations.js"></script>
-<script type="text/javascript" src="js/typed.js"></script>
-  <script src="js/soundmanager2.js"></script>
-<link rel="stylesheet" href="css/animations.css">
+  Above Body - Tic Tac toe
+  <body>
+    <div id="loadingbox" class =""></div>
 
+      <div id="board" class ="">
+                <div id ="dial" class="dialanim" >
 
+                  <img src="imgs/disconnected.png" id ="dialanimimg" style="width:300px; height=225px;">
+                  <!--  <img src="imgs/connecting.png" id="dialanim" style="width:300px;">
+                  <img src="imgs/connected.png" id="dialanim" style="width:300px;"> -->
 
-<link rel="stylesheet" type="text/css" href="tictac.css">
-</head>
-
-Above Body - Tic Tac toe
-<body>
-<div id="loadingbox" class =""></div>
-
-<div id="board" class ="">
-            <div id ="dial" class="dialanim" >
-
-            <img src="imgs/disconnected.png" id ="dialanimimg" style="width:300px; height=225px;">
-           <!--  <img src="imgs/connecting.png" id="dialanim" style="width:300px;">
-            <img src="imgs/connected.png" id="dialanim" style="width:300px;"> -->
-
-            <div id="dialtext" class="dialtextclass">Error:No Connection</div>
-            </div>
-            
-            
-
-
-            <div id ="game" class ="hidden">
-            <span class ="gamesquare" id="0" ></span>
-            <span class ="gamesquare" id="1" ></span>
-            <span class ="gamesquare" id="2" ></span>
-            <span class ="gamesquare" id="3" ></span>
-            <span class ="gamesquare" id="4" ></span>
-            <span class ="gamesquare" id="5" ></span>
-            <span class ="gamesquare" id="6" ></span>
-            <span class ="gamesquare" id="7" ></span>
-            <span class ="gamesquare" id="8" ></span>
-            </div>
-
-            <div id="uiblock">
-              
-              <span class = "uiblock" id="ui1">
-
-              <span id="ui1a">Waiting for Input</span></span>
+                 <div id="dialtext" class="dialtextclass">Error:No Connection</div>
+                </div>
                 
-              <span class = "uiblock" id="ui2">...
-
-              
-              <button type="button" id="button1">play game</button>
-              <button type="button" id="button2">toggle dial</button>
-              <button type="button" id="button3">Reset</button>
-  
-              
-  
-
-              </span>
-            </div>
-
-          </div>
+                
 
 
+                <div id ="game" class ="hidden">
+                <span class ="gamesquare" id="0" ></span>
+                <span class ="gamesquare" id="1" ></span>
+                <span class ="gamesquare" id="2" ></span>
+                <span class ="gamesquare" id="3" ></span>
+                <span class ="gamesquare" id="4" ></span>
+                <span class ="gamesquare" id="5" ></span>
+                <span class ="gamesquare" id="6" ></span>
+                <span class ="gamesquare" id="7" ></span>
+                <span class ="gamesquare" id="8" ></span>
+                </div>
+
+                <div id="uiblock">
+                  
+                  <span class = "uiblock" id="ui1">
+
+                  <span id="ui1a">Waiting for Input</span></span>
+                    
+                  <span class = "uiblock2" id="ui2">
+
+                    <button type="button" id="button1">Load Game</button>
+                    <button type="button" id="button2">ARPA Dialout</button>
+                    <button type="button" id="button3">Reset</button>
+
+                  </span>
+
+                </div>
+
+      </div>
 
 
-<!-- end loading box -->
-</body>
+
+
+    <!-- end loading box -->
+  </body>
 </html>
