@@ -87,18 +87,32 @@ $( "#button1" ).dblclick(function() {
 
 });
 
-$( "#button3" ).click(function() {
+$( "#button2" ).click(function() {
   
-  nextMsg(messages);
   $(function (){
-      $("#ui1a").typed({
-        strings: ["Arming Warheads", "Second sentence."],
+      $("#dialtext").typed({
+        
+        strings: ["Dialing", "Connection Established"],
         typeSpeed: 0
       });
+      
+      nextMsg;
+      });
+  });
+
+
+$( "#button3" ).click(function() {
+  
+  
+  $(function (){
+      $("#ui1a").typed({
+        strings: ["Arming Warheads", "Please Draw to disable"],
+        typeSpeed: 0
+
+      });
       });
 
-
-
+    nextMsg(messages);
   });
 
 // $(function (){
@@ -121,3 +135,12 @@ $( "#button3" ).click(function() {
 //     -moz-animation: blink 0.7s infinite;
 //     animation: blink 0.7s infinite;
 // }
+
+// $(function() {
+//  $('.menulink').click(function(){
+//    $("#bg").attr('src',"img/picture1.jpg");
+//    return false;
+//  });
+// });
+
+

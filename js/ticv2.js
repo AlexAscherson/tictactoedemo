@@ -45,8 +45,9 @@ function playSound(filename) {
         //console.log("its the count " +count);
         if (count ===3) {
           alert("we have a winner" + activeplayer);
+          playSound('abomb.mp3');
           playerwin = activeplayer;
-           $('#ui1a').text(activeplayer);
+           $('#ui1a').text(activeplayer + " Wins");
         }
       })
     })   
@@ -83,7 +84,10 @@ function playSound(filename) {
             activeplayer = "x";
           } 
                 //endplayer2code /else          
-      }else {alert("The Game is over. Double click a square to restart");}
+      }else {alert("The Game is over. Double click a square to restart");
+      playSound('no.mp3');
+
+    }
 
             //end emptycheck 
     } else {console.log("Illegal move, box is full");}

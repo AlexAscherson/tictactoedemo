@@ -15,6 +15,44 @@
             color: white;
           }
 
+          #dial {
+            height:303px !important;
+            font-size: 15pt !important;
+          }
+
+          #dial #dialtext{
+            /*height:303px !important;*/
+            font-size: 15pt !important;
+            border: 0px solid #f00 !important;
+
+          }
+  
+          #game {width: 305px !important;}
+
+          #dial span{
+            height:75px !important;
+            width:302px !important;
+            border: 0px solid #f00 !important;
+            font-size: 25px;
+          }
+
+          .dialtext span{
+            height:75px !important;
+            width:302px !important;
+            border: 0px solid #f00 !important;
+            font-size: 5px !important;
+
+
+          }
+
+          #dialtext span{
+            height:75px !important;
+            width:302px !important;
+            border: 0px solid #f00 !important; 
+            font-size: 25px;        
+          }
+
+
  #board{
             width:920px;
             /*height:920px;*/
@@ -26,7 +64,7 @@
             width:300px;
             height:300px;
             float:left;
-            border:1px solid #ff8a00;
+            border:2px solid green !important;
             background-color: #000000;
             opacity: 0.6;
             color: white;
@@ -37,7 +75,7 @@
             height:98px;
             float:left; 
             display:block;
-            border:1px solid white;
+            border:2px solid green !important;
             text-align:center;  
             line-height:99px;
             background-color:#000000;
@@ -55,7 +93,7 @@
             width:300px;
             height:300px;
             float:left;
-            border:1px solid #ff8a00;
+            border:2px solid green !important;
             background-color: #000000;
             opacity: 0.6;
             color: white;
@@ -79,7 +117,7 @@
             height:200px !important;
             float:left; 
             display:block;
-            border:1px solid green !important;
+            border:2px solid green !important;
             text-align:center;  
             line-height:99px;
             background-color:#000000;  
@@ -92,7 +130,7 @@
             height:192px !important;
             float:left; 
             display:block;
-            border:1px solid green;
+            border:2px solid green !important;
             text-align:center;  
             line-height:99px;
             background-color:#000000;     
@@ -105,14 +143,20 @@
             height:98px ;
             float:left; 
             display:block;
-            border:1px solid white;
+            border:2px solid green !important;
             text-align:center;  
             line-height:99px;
             background-color:#000000;
-            /*margin-left: 6px;      */
+            margin-left: 3px;      
           }
 
-
+ .typed-cursor{
+     opacity: 1;
+     -webkit-animation: blink 0.7s infinite;
+     -moz-animation: blink 0.7s infinite;
+     animation: blink 0.7s infinite;
+     display: none;
+ }
 
 /*
 
