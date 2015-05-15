@@ -21,11 +21,15 @@
           }
 
           #dial #dialtext{
-            /*height:303px !important;*/
-            font-size: 15pt !important;
+            /*height:100px !important;*/
+            font-size: 35pt !important;
             border: 0px solid #f00 !important;
+            font-family: Digital Readout Thick Upright !important;
+            color: #66FF00;
 
           }
+
+
   
           #game {width: 305px !important;}
 
@@ -135,6 +139,8 @@
             line-height:99px;
             background-color:#000000;     
             /*margin-left: 3px; */
+            font-family: Digital Readout Thick Upright !important;
+            color: #66FF00;
           }
           
           #ui2{

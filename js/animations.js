@@ -36,9 +36,11 @@ function nextMsg() {
 var messages = [
     "Learning Mode on",
     "Please Wait..Learning.",
-    // "Hello World! Hello Sun! ",
-    // "Learning Complete. Arming Warheads.",
-    // "Please enter 3 correct symbols to continue",
+    "Hello World! Hello Sun! ",
+    "Learning Complete.",
+    "Kill All Humans.",
+    "Arming Warheads",
+    " please save open files",
 ].reverse();
 
  // $('img.swap').click(function () {
@@ -55,7 +57,7 @@ var messages = [
 //
 
 function statustext(){
-  $('#ui1a').html("Waiting for input").fadeIn(500).delay(1000)
+  $('#ui1a').html("Waiting for input").fadeIn(500).delay(1000);
   //.fadeOut(500);
 
 }
@@ -91,12 +93,14 @@ $( "#button2" ).click(function() {
   
   $(function (){
       $("#dialtext").typed({
-        
+
         strings: ["Dialing", "Connection Established"],
-        typeSpeed: 0
+        typeSpeed: 0,
+        showcursor: false,
       });
-      
-      nextMsg;
+
+      //nextMsg;
+      changeimageloop();
       });
   });
 
@@ -124,7 +128,7 @@ $( "#button3" ).click(function() {
 
   // });
 
-});
+
 
  
 // Add this for the animated blinking cursor.
@@ -136,11 +140,70 @@ $( "#button3" ).click(function() {
 //     animation: blink 0.7s infinite;
 // }
 
-// $(function() {
-//  $('.menulink').click(function(){
-//    $("#bg").attr('src',"img/picture1.jpg");
-//    return false;
-//  });
-// });
+var imgcounter = 0;
+
+function changeimg() {
+ 
+   // $("#dialanim").attr('src',"imgs/connecting.png").fadeIn(500).delay(1000);
+  // debugger;
+
+  if (imgcounter <= 1) {
+
+
+
+    $("#dialanimimg").attr('src', 'imgs/connecting.png');
+
+  // setTimeout( function(){
+  //   $("#dialanimimg").attr('src', 'imgs/connecting.png');
+  //    },2000);
+    imgcounter++;
+  console.log('if passed');
+  
+    
+  }
+  else{
+  setTimeout( function(){
+  //   $("#dialanimimg").attr('src', 'imgs/connected.png');
+  //    },2000);
+      console.log("its else");
+
+       $("#dialanimimg").attr('src', 'imgs/connected.png');
+
+       },2000);
+
+
+      setTimeout( function(){nextMsg();},2000);
+  }
+}
+
+
+function changeimageloop(){
+for (var i = 0; i < 3; i++) {
+  changeimg();
+  
+};
+}
+
+    
+
+
+
+
+ //    var newImg = $("#dialanimimg").attr('src').replace(/default.jpg/,'1.jpg');
+ 
+ //    $("#dialanimimg").attr('src',newImg);
+ //    window.setTimeout(function(){
+ //     newImg = $("#dialanimimg").attr('src').replace(/1.jpg/,'2.jpg');
+ //     $("#dialanimimg").attr('src',newImg);
+ // },1000);
+
+
+
+
+
+
+//changeimg();
+
+});
 
 
