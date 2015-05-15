@@ -26,6 +26,8 @@
             border: 0px solid #f00 !important;
             font-family: Digital Readout Thick Upright !important;
             color: #66FF00;
+            margin-left: 10px;
+            margin-top: 10px;
 
           }
 
@@ -60,7 +62,7 @@
  #board{
             width:920px;
             /*height:920px;*/
-            width: 610px;
+            width: 615px;
             position:fixed;
             top: 25%;
             left: 25%;

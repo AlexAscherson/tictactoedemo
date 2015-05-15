@@ -181,7 +181,7 @@ function changeimg() {
 
 function changeimageloop(){
 for (var i = 0; i < 3; i++) {
-  changeimg();
+  setTimeout( function(){changeimg();},2000); 
   
 }
 }
